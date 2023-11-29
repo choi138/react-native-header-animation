@@ -208,3 +208,89 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
+
+// Height Animation
+
+//export default function App() {
+//   const [changeHeight, setChangeHeight] = useState(false);
+//   const height = useRef<any>(new Animated.Value(100)).current;
+
+//   const onChangeHeight = () => {
+//     setChangeHeight(!changeHeight);
+//     Animated.timing(height, {
+//       toValue: changeHeight ? 100 : 200,
+//       duration: 250,
+//       useNativeDriver: false,
+//     }).start();
+//   };
+
+//   return (
+//     <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+//       <View>
+//         <Animated.View
+//           ref={height}
+//           style={{height: height, width: 100, backgroundColor: 'red'}}
+//         />
+//         <View style={{height: 100, width: 100, backgroundColor: 'gray'}}>
+//           <Text>I am Box!</Text>
+//         </View>
+//         <TouchableOpacity onPress={onChangeHeight}>
+//           <Text>Press me</Text>
+//         </TouchableOpacity>
+//       </View>
+//     </SafeAreaView>
+//   );
+// }
+
+// TranslateY Animation
+// const App = () => {
+//   const [isVisiableBox, setIsVisiableBox] = useState(false);
+
+//   const translateY = useRef(new Animated.Value(0)).current;
+
+//   const onToggleBox = () => {
+//     Animated.timing(translateY, {
+//       toValue: isVisiableBox ? 0 : -100,
+//       duration: 250,
+//       useNativeDriver: false,
+//     }).start();
+//     setIsVisiableBox(!isVisiableBox);
+//   };
+
+//   return (
+//     <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+//       <View
+//         style={{
+//           width: '100%',
+//           marginTop: 100,
+//           justifyContent: 'center',
+//           alignItems: 'center',
+//           position: 'relative',
+//           borderColor: 'red',
+//           borderWidth: 1,
+//         }}>
+//         <Animated.View
+//           style={{
+//             position: 'absolute',
+//             bottom: 0,
+//             top: 0,
+//             width: '10%',
+//             height: 100,
+//             backgroundColor: 'green',
+//             transform: [{translateY}],
+//           }}>
+//           <View style={{height: 100, width: 100, backgroundColor: 'gray'}}>
+//             <Text>I am Box!</Text>
+//           </View>
+//         </Animated.View>
+//         <TouchableOpacity onPress={onToggleBox} style={{zIndex: 99}}>
+//           <View style={{height: 100, width: 100, backgroundColor: 'red'}}>
+//             <Text>Press me</Text>
+//           </View>
+//         </TouchableOpacity>
+//       </View>
+//     </SafeAreaView>
+//   );
+// };
+
+// export default App;
